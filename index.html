@@ -140,7 +140,7 @@ footer {
 .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 400; color: var(--text-dark); line-height: 1; }
 .stat-label { font-size: 0.75rem; color: var(--text-light); margin-top: 0.25rem; font-weight: 400; letter-spacing: 0.03em; }
 .hero-right { position: relative; overflow: hidden; background: var(--blush); }
-.hero-img-grid { position: absolute; inset: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 3px; }
+.hero-img-grid { position: absolute; inset: 0; display: grid; grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; gap: 3px; }
 .hero-img-cell { overflow: hidden; position: relative; display: flex; align-items: center; justify-content: center; font-size: 4rem; }
 .hero-badge { position: absolute; bottom: 2rem; left: -1rem; z-index: 10; background: white; border-radius: 1rem; padding: 1rem 1.5rem; box-shadow: 0 8px 32px rgba(44,36,22,0.12); max-width: 220px; }
 .badge-title { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 500; color: var(--text-dark); margin-bottom: 0.2rem; }
@@ -225,7 +225,10 @@ footer {
 .step-card { background: var(--white); border-radius: 1.5rem; padding: 2.5rem 2rem; border: 1px solid rgba(201,123,90,0.15); position: relative; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; }
 .step-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(201,123,90,0.12); }
 .step-card::before { content: attr(data-num); position: absolute; top: -0.5rem; right: 1.5rem; font-family: 'Cormorant Garamond', serif; font-size: 6rem; font-weight: 300; color: var(--blush-mid); opacity: 0.4; line-height: 1; pointer-events: none; }
-.step-icon { width: 3rem; height: 3rem; border-radius: 0.75rem; background: var(--blush); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.25rem; }
+.step-icon { display: none; }
+.step-tag { display: inline-flex; align-items: center; gap: 0.6rem; margin-bottom: 1.5rem; }
+.step-tag-line { width: 2rem; height: 1px; background: var(--blush-dark); opacity: 0.5; }
+.step-tag-label { font-family: 'DM Sans', sans-serif; font-size: 0.7rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blush-dark); opacity: 0.85; }
 .step-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 500; color: var(--text-dark); margin-bottom: 0.75rem; }
 .step-desc { font-size: 0.9rem; color: var(--text-mid); line-height: 1.7; font-weight: 300; }
 
@@ -524,17 +527,15 @@ footer {
         </button>
       </div>
       <div class="hero-stats animate-fadeup delay-4">
-        <div><div class="stat-num">500+</div><div class="stat-label">Venues listed</div></div>
-        <div><div class="stat-num">12</div><div class="stat-label">Cities covered</div></div>
-        <div><div class="stat-num">₹0</div><div class="stat-label">No booking fees</div></div>
+        <div><div class="stat-num">20+</div><div class="stat-label">Venues listed</div></div>
+        <div><div class="stat-num">2</div><div class="stat-label">Cities covered</div></div>
+        <div><div class="stat-num">100%</div><div class="stat-label">Verified listings</div></div>
       </div>
     </div>
     <div class="hero-right">
       <div class="hero-img-grid">
         <div class="hero-img-cell" style="background:linear-gradient(135deg,#F9EDE8,#F0CFC4);opacity:0.5;">🌸</div>
         <div class="hero-img-cell" style="background:linear-gradient(135deg,#D4E4C8,#B8D4A0);opacity:0.4;">🌿</div>
-        <div class="hero-img-cell" style="background:linear-gradient(135deg,#FAEEDA,#F5C97A66);opacity:0.4;">🪔</div>
-        <div class="hero-img-cell" style="background:linear-gradient(135deg,#F9EDE8,#E8C4B8);opacity:0.4;">💐</div>
       </div>
       <div class="hero-badge">
         <div class="badge-title">The Oberoi, Bangalore</div>
@@ -551,12 +552,12 @@ footer {
     <!-- HOW IT WORKS -->
   <section id="how-section" class="how-section">
     <div class="section-label"><span class="eyebrow-line"></span> How It Works</div>
-    <h2 class="section-title">Book your venue in<br>three simple steps</h2>
-    <p class="section-sub">No more calling 20 venues, no more vague quotes, no more wasted weekends on venue visits that go nowhere.</p>
+    <h2 class="section-title">Your venue search,<br><em>simplified.</em></h2>
+    <p class="section-sub">No more calling multiple venues, no more wasted weekends on venue visits that go nowhere.</p>
     <div class="steps">
-      <div class="step-card" data-num="01"><div class="step-icon">🔍</div><div class="step-title">Search & Filter</div><p class="step-desc">Enter your city, guest count, budget, and preferred dates. Instantly see venues that match — with real availability shown upfront.</p></div>
-      <div class="step-card" data-num="02"><div class="step-icon">📋</div><div class="step-title">Compare & Shortlist</div><p class="step-desc">View detailed venue pages with photos, pricing breakdowns, amenities, capacity, and verified reviews from real couples.</p></div>
-      <div class="step-card" data-num="03"><div class="step-icon">✅</div><div class="step-title">Book with Confidence</div><p class="step-desc">Confirm your venue directly on Utsav. Pay a small deposit to lock the date. No middlemen, no spam, no surprises.</p></div>
+      <div class="step-card" data-num="01"><div class="step-tag"><span class="step-tag-line"></span><span class="step-tag-label">Step One</span></div><div class="step-title">Search & Filter</div><p class="step-desc">Enter your city, guest count, budget, and preferred dates. Instantly see venues that match — with real availability shown upfront.</p></div>
+      <div class="step-card" data-num="02"><div class="step-tag"><span class="step-tag-line"></span><span class="step-tag-label">Step Two</span></div><div class="step-title">Compare & Shortlist</div><p class="step-desc">View detailed venue pages with photos, pricing breakdowns, amenities, capacity, and verified reviews from real couples.</p></div>
+      <div class="step-card" data-num="03"><div class="step-tag"><span class="step-tag-line"></span><span class="step-tag-label">Step Three</span></div><div class="step-title">Visit & Decide</div><p class="step-desc">Walk into your shortlisted venues knowing exactly what to expect — pricing, capacity, availability. No surprises, no pressure. Just the right venue for your day.</p></div>
     </div>
   </section>
 
@@ -575,7 +576,7 @@ footer {
           <div class="feature-row"><div class="feature-check"><div class="check-mark"></div></div><div class="feature-text"><strong>Real availability, not inquiry forms</strong><span>See which dates are actually open before you fall in love with a venue.</span></div></div>
           <div class="feature-row"><div class="feature-check"><div class="check-mark"></div></div><div class="feature-text"><strong>Transparent, upfront pricing</strong><span>No more "it depends" quotes. See actual price ranges per plate, per day, all-inclusive.</span></div></div>
           <div class="feature-row"><div class="feature-check"><div class="check-mark"></div></div><div class="feature-text"><strong>Zero spam calls</strong><span>Unlike other platforms that sell your number to 10 vendors, we only connect you when you choose.</span></div></div>
-          <div class="feature-row"><div class="feature-check"><div class="check-mark"></div></div><div class="feature-text"><strong>Verified reviews from real couples</strong><span>Every review is linked to a confirmed booking — no fake testimonials, ever.</span></div></div>
+          <div class="feature-row"><div class="feature-check"><div class="check-mark"></div></div><div class="feature-text"><strong>Verified reviews from real couples</strong><span>Every review is from a couple who actually visited — no fake testimonials, ever.</span></div></div>
         </div>
       </div>
     </div>
@@ -588,7 +589,7 @@ footer {
       <div class="cta-floral right">✿</div>
       <div class="cta-tag">Coming Soon</div>
       <h2 class="cta-title">Your perfect venue is<br>waiting to be <em>discovered.</em></h2>
-      <p class="cta-sub">Be among the first couples and venue owners to join Utsav.<br>Early access members get priority listing and zero commission for 6 months.</p>
+      <p class="cta-sub">Be among the first couples and venue owners to join Utsav.<br>Early access members get priority listing and dedicated onboarding support.</p>
       <div class="cta-form">
         <input class="cta-input" type="email" placeholder="Enter your email address" id="ctaEmail" />
         <button class="cta-btn" onclick="submitCTA()">Get Early Access</button>
@@ -645,24 +646,24 @@ footer {
         <div class="team-left">
           <div class="team-avatar team-avatar-1">👤</div>
           <div>
-            <div class="team-name">Jahanvi Arora</div>
+            <div class="team-name">Co-Founder 1</div>
             <div class="team-role">Co-Founder</div>
           </div>
         </div>
         <div class="team-right">
-          <p class="team-bio">Jahanvi spent years in India's hospitality and events industry, working with venues and wedding planners across the country. She watched too many couples navigate a broken, opaque system — and decided to fix it.</p>
+          <p class="team-bio">Spent years in India's hospitality and events industry, working with venues and wedding planners across the country. Watched too many couples navigate a broken, opaque system — and decided to fix it.</p>
         </div>
       </div>
       <div class="team-card">
         <div class="team-left">
           <div class="team-avatar team-avatar-2">👤</div>
           <div>
-            <div class="team-name">Varyan Goel</div>
+            <div class="team-name">Co-Founder 2</div>
             <div class="team-role">Co-Founder</div>
           </div>
         </div>
         <div class="team-right">
-          <p class="team-bio">Varyan is a product builder with a background in marketplace platforms and consumer tech. He believes the best products remove friction invisibly — and leads product and engineering at Utsav.</p>
+          <p class="team-bio">A product builder with a background in marketplace platforms and consumer tech. Believes the best products remove friction invisibly — and leads product and engineering at Utsav.</p>
         </div>
       </div>
     </div>
@@ -776,12 +777,12 @@ footer {
   <section class="list-hero">
     <div class="list-hero-left">
       <div class="list-hero-eyebrow"><span class="list-hero-eyebrow-line"></span> For Venue Owners</div>
-      <h1 class="list-hero-title">Reach couples who are<br><em>ready to book.</em><br>Not just browsing.</h1>
-      <p class="list-hero-sub">List your venue on Utsav and connect with couples who have already filtered by city, capacity, and budget. Zero upfront cost. Commission only when you win a booking.</p>
+      <h1 class="list-hero-title">Reach couples who are<br><em>genuinely searching.</em><br>Not just scrolling.</h1>
+      <p class="list-hero-sub">List your venue on Utsav and connect with couples who have already filtered by your city, venue type, and budget. Free to list. No spam. No middlemen.</p>
       <button class="btn-primary" onclick="document.getElementById('signup-section').scrollIntoView({behavior:'smooth'})" style="background:var(--marigold);color:var(--text-dark);font-weight:600;width:fit-content;">List My Venue — It's Free</button>
       <div class="list-hero-trust">
-        <div class="trust-item"><span class="trust-dot"></span>₹0 upfront cost</div>
-        <div class="trust-item"><span class="trust-dot"></span>Commission on bookings only</div>
+        <div class="trust-item"><span class="trust-dot"></span>₹0 to list</div>
+        <div class="trust-item"><span class="trust-dot"></span>Free during early access</div>
         <div class="trust-item"><span class="trust-dot"></span>You control your pricing</div>
       </div>
     </div>
@@ -795,7 +796,7 @@ footer {
           <div class="preview-stat"><div class="preview-stat-val">∞</div><div class="preview-stat-label">Reach couples in your city</div></div>
           <div class="preview-stat"><div class="preview-stat-val">₹0</div><div class="preview-stat-label">Zero listing fee, always</div></div>
           <div class="preview-stat"><div class="preview-stat-val">100%</div><div class="preview-stat-label">You set your own prices</div></div>
-          <div class="preview-stat"><div class="preview-stat-val">Real</div><div class="preview-stat-label">Verified booking leads only</div></div>
+          <div class="preview-stat"><div class="preview-stat-val">Real</div><div class="preview-stat-label">Genuinely interested couples only</div></div>
         </div>
       </div>
     </div>
@@ -804,14 +805,14 @@ footer {
   <section class="benefits-section">
     <div class="benefits-inner">
       <div class="section-label"><span class="eyebrow-line"></span> Why Utsav</div>
-      <h2 class="section-title">Not just another lead generator.<br><em>We're a booking platform.</em></h2>
+      <h2 class="section-title">Not just another lead generator.<br><em>A platform built for venue owners.</em></h2>
       <div class="benefits-grid">
         <div class="benefit-card"><div class="benefit-icon">🎯</div><div class="benefit-title">Qualified leads, not spam enquiries</div><div class="benefit-body">Couples have already filtered by your city, venue type, guest size, and budget. When they contact you, they're genuinely interested.</div><span class="benefit-highlight">Higher conversion rates</span></div>
-        <div class="benefit-card"><div class="benefit-icon">💰</div><div class="benefit-title">Zero upfront fees, ever</div><div class="benefit-body">No listing fee, no subscription, no "featured placement" payment. You only pay a small commission when a booking is confirmed.</div><span class="benefit-highlight">Commission on success only</span></div>
+        <div class="benefit-card"><div class="benefit-icon">💰</div><div class="benefit-title">Free to list during early access</div><div class="benefit-body">No listing fee, no subscription, no "featured placement" payment. Utsav is in early access — get your venue in front of real couples at no cost.</div><span class="benefit-highlight">Free during launch period</span></div>
         <div class="benefit-card"><div class="benefit-icon">🔒</div><div class="benefit-title">Full control of your listing</div><div class="benefit-body">You set your prices, manage your availability, and control exactly what couples see. Update everything in minutes.</div><span class="benefit-highlight">Your venue, your rules</span></div>
-        <div class="benefit-card"><div class="benefit-icon">⭐</div><div class="benefit-title">Build real trust with verified reviews</div><div class="benefit-body">Utsav reviews are linked to confirmed bookings — no anonymous internet reviews. Protects your reputation.</div><span class="benefit-highlight">Verified reviews only</span></div>
+        <div class="benefit-card"><div class="benefit-icon">⭐</div><div class="benefit-title">Build real trust with verified reviews</div><div class="benefit-body">Utsav reviews come from couples who actually visited your venue — no anonymous internet reviews. Protects your reputation.</div><span class="benefit-highlight">Verified reviews only</span></div>
         <div class="benefit-card"><div class="benefit-icon">📊</div><div class="benefit-title">Insights into what couples want</div><div class="benefit-body">See views, searches, and drop-off data. Use analytics to optimise your pricing and presentation.</div><span class="benefit-highlight">Free analytics dashboard</span></div>
-        <div class="benefit-card"><div class="benefit-icon">🤝</div><div class="benefit-title">A platform that grows with you</div><div class="benefit-body">Early partner venues get priority placement, lower commission rates, and dedicated onboarding support.</div><span class="benefit-highlight">Early partner benefits</span></div>
+        <div class="benefit-card"><div class="benefit-icon">🤝</div><div class="benefit-title">A platform that grows with you</div><div class="benefit-body">Early partner venues get priority placement and dedicated onboarding support — we work with you personally to get your listing right.</div><span class="benefit-highlight">Early partner benefits</span></div>
       </div>
     </div>
   </section>
@@ -824,7 +825,7 @@ footer {
         <div class="step-v"><div class="step-v-num">1</div><div class="step-v-title">Submit Interest</div><div class="step-v-body">Fill in the form below with your venue's basic details. Takes less than 5 minutes.</div></div>
         <div class="step-v"><div class="step-v-num">2</div><div class="step-v-title">Onboarding Call</div><div class="step-v-body">Our team calls to verify details, answer questions, and walk you through the dashboard.</div></div>
         <div class="step-v"><div class="step-v-num">3</div><div class="step-v-title">Create Your Profile</div><div class="step-v-body">Add photos, set pricing, mark availability, and publish your listing.</div></div>
-        <div class="step-v"><div class="step-v-num">4</div><div class="step-v-title">Start Receiving Bookings</div><div class="step-v-body">Couples book directly. You get notified instantly and confirm within 24 hours.</div></div>
+        <div class="step-v"><div class="step-v-num">4</div><div class="step-v-title">Start Getting Enquiries</div><div class="step-v-body">Couples find your venue, shortlist it, and reach out directly. You respond on your terms — no middlemen, no spam.</div></div>
       </div>
     </div>
   </section>
@@ -836,15 +837,15 @@ footer {
         <div class="pricing-floral right">✿</div>
         <div>
           <div class="pricing-label">Our Model</div>
-          <h2 class="pricing-title">Simple, <em>fair</em> pricing.<br>No surprises.</h2>
-          <p class="pricing-body">We charge nothing upfront — and a small commission only when a booking is confirmed. During our launch period, early partners enjoy a reduced commission rate as our thank you for believing in Utsav first.</p>
+          <h2 class="pricing-title">Free to list.<br><em>Always.</em></h2>
+          <p class="pricing-body">Utsav is in early access. We're onboarding our first set of venue partners personally — and it costs nothing to be part of it. No listing fee, no subscription, no hidden charges. Our focus right now is building the best venue discovery experience in India, together.</p>
         </div>
         <div class="pricing-features">
-          <div class="pricing-feature"><div class="pricing-check">✓</div><div class="pricing-feature-text"><strong>₹0 listing fee</strong> — free to list, always</div></div>
-          <div class="pricing-feature"><div class="pricing-check">✓</div><div class="pricing-feature-text"><strong>₹0 subscription</strong> — no monthly charges</div></div>
-          <div class="pricing-feature"><div class="pricing-check">✓</div><div class="pricing-feature-text"><strong>Small commission on confirmed bookings only</strong> — exact rates shared on onboarding call</div></div>
-          <div class="pricing-feature"><div class="pricing-check">✓</div><div class="pricing-feature-text"><strong>6 months zero commission</strong> — for venues that join the pre-launch waitlist</div></div>
-          <div class="pricing-feature"><div class="pricing-check">✓</div><div class="pricing-feature-text"><strong>Free analytics dashboard</strong> — views, enquiries, conversion data</div></div>
+          <div class="pricing-feature"><div class="pricing-check">✓</div><div class="pricing-feature-text"><strong>₹0 to list</strong> — free during early access, no card required</div></div>
+          <div class="pricing-feature"><div class="pricing-check">✓</div><div class="pricing-feature-text"><strong>₹0 subscription</strong> — no monthly charges, ever</div></div>
+          <div class="pricing-feature"><div class="pricing-check">✓</div><div class="pricing-feature-text"><strong>Priority placement</strong> — early partners appear first as we grow</div></div>
+          <div class="pricing-feature"><div class="pricing-check">✓</div><div class="pricing-feature-text"><strong>Dedicated onboarding</strong> — we set up your listing with you personally</div></div>
+          <div class="pricing-feature"><div class="pricing-check">✓</div><div class="pricing-feature-text"><strong>Free analytics dashboard</strong> — views, enquiries, and couple interest data</div></div>
         </div>
       </div>
     </div>
